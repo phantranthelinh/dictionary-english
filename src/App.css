@@ -1,38 +1,110 @@
-.App {
+:root {
+  --primary-color: rgb(101, 78, 250);
+}
+
+body {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 400px;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 5px 5px rgb(34, 4, 228);
+}
+.container ul {
+  list-style: none;
+  max-height: 250px;
+  overflow: scroll;
+  font-size: 1.4rem;
+}
+.container h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: var(--primary-color);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container form {
+  margin-top: 1.5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
   flex-direction: column;
+}
+.voices-icons {
+  background-color: #fff;
+  margin-top: -1rem;
+  border: 1px solid #bbb;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: none;
+  margin-bottom: 1rem;
+  display: flex;
+  text-align: right;
+  padding-right: 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.voices-icons i {
+  cursor: pointer;
+  opacity: 0.5;
+  margin-left: 0.8rem;
+}
+.voices-icons i.speak {
+  color: var(--primary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.select-voices {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container form textarea,
+.container form select {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.container form select {
+  width: 100%;
+}
+.container form textarea {
+  border: 1px solid #bbb;
+}
+.word {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.word span {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+.contain {
+  margin-top: 7px;
+}
+.contain .details {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 10px;
+  padding: 5px 0;
+  border-radius: 5px;
+  border-left: 3px solid var(--primary-color);
+}
+.details p {
+  opacity: 0.6;
+}
+.contain .synouyms span {
+  opacity: 0.6;
+  border-bottom: 1px solid var(--primary-primary);
+  cursor: pointer;
+}
+.contain .synouyms span:hover {
+  color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
